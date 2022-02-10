@@ -30,6 +30,10 @@ Contact Panopto support for more detail information.
 8. The rest can be blank. Click "Create API Client" button.
 9. Note the created Client ID and Client Secret.
 
+Client Name	Watershed
+Client Id	19b472a6-e2d3-47ee-a501-ae3501561601
+Client Secret	dj5FzRxN9KgMlu0NjjhC8uXeswh8sWUmTHNQ4/p5izk=
+
 ## Run the sample
 Type the following command.
 ```
