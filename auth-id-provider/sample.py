@@ -4,6 +4,7 @@ import argparse
 import requests
 import urllib3
 import time
+import json
 from hashlib import sha256
 from base64 import b64encode
 
@@ -51,9 +52,11 @@ def main():
             # Re-try now
             continue
         data = resp.json() # parse JSON format response
-        for folder in data:
-            print('  {0}: {1}'.format(folder['Id'], folder['Name']))
-        time.sleep(60)
+        results = data['Results']
+        for folder in results:
+            #log the output to the console.
+            print('{0} :  {1}'.format(folder['Name'], folder['Id']))
+        time.sleep(600)
 
 def authorization(requests_session, oauth2, application_key, username):
     # Generate authentication code
